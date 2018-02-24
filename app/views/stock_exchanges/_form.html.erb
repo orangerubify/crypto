@@ -1,0 +1,42 @@
+<%= form_with(model: stock_exchange, local: true) do |form| %>
+  <% if stock_exchange.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(stock_exchange.errors.count, "error") %> prohibited this stock_exchange from being saved:</h2>
+
+      <ul>
+      <% stock_exchange.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name, id: :stock_exchange_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :description %>
+    <%= form.text_area :description, id: :stock_exchange_description %>
+  </div>
+
+  <div class="field">
+    <%= form.label :website %>
+    <%= form.text_field :website, id: :stock_exchange_website %>
+  </div>
+
+  <div class="field">
+    <%= form.label :active %>
+    <%= form.check_box :active, id: :stock_exchange_active %>
+  </div>
+
+  <div class="field">
+    <%= form.label :priority %>
+    <%= form.number_field :priority, id: :stock_exchange_priority %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

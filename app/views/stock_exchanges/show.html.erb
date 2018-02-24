@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @stock_exchange.name %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @stock_exchange.description %>
+</p>
+
+<p>
+  <strong>Website:</strong>
+  <%= @stock_exchange.website %>
+</p>
+
+<p>
+  <strong>Active:</strong>
+  <%= @stock_exchange.active %>
+</p>
+
+<p>
+  <strong>Priority:</strong>
+  <%= @stock_exchange.priority %>
+</p>
+
+<%= link_to 'Edit', edit_stock_exchange_path(@stock_exchange) %> |
+<%= link_to 'Back', stock_exchanges_path %>
